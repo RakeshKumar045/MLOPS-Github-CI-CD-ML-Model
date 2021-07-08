@@ -17,8 +17,11 @@ jobs:
     - name: ML-python-raka
       run: |
           # Your ML workflow goes here
+          echo "start install"
           pip install -r requirements.txt
+          echo "done"
           python train.py
+          echo "trained"
           
           echo "## Model metrics" > report.md
           cat metrics.txt >> report.md
