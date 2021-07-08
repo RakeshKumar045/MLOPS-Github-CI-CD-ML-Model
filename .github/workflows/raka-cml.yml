@@ -16,6 +16,8 @@ jobs:
     steps:
     - uses: actions/checkout@v2
     - name: ML-python-raka
+      env:
+        repo_token: ${{ secrets.GITHUB_TOKEN }}
       run: |
           # Your ML workflow goes here
           echo "start install"
